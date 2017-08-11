@@ -20,3 +20,13 @@ body {
     height: 200px;
 }
 
+.content{
+    text-align: center;
+    font-family: sans-serif;
+    background-color: lightgrey;
+    margin-top: 75px;
+    padding-left : 10px;
+    padding-right: 10px;
+    
+}
+
