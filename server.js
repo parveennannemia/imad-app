@@ -12,7 +12,7 @@ var article1 = {
     articleContent : ' <p>This is my First Article.This is my First Article.This is my First Article.<br>This is my First Article.This is my First Article.This is my First Article.<br>This is my First Article.This is my First Article. </p>'
 };
 function createTemplate(data){
-    var title=data.title;
+    var title= '${data.title}';
     var heading=data.head;
     var date=data.date;
     var articleContent= data.articleContent;
