@@ -28,6 +28,10 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function(req,res){
+res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+    //res.send(createTemplate(article1));
+});
+app.get('/article-one',function(req,res){
 //res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
     res.send(createTemplate(article1));
 });
