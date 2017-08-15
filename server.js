@@ -27,13 +27,14 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one',function(req,res){
-res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-    //res.send(createTemplate(article1));
-});
-app.get('/article-one',function(req,res){
+//app.get('/article-one',function(req,res){
 //res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-    res.send(createTemplate(article1));
+    //res.send(createTemplate(article1));
+//});
+app.get('/:articleName',function(req,res){
+//res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+var articleName = req.param.articleName;
+    res.send(createTemplate(articleName));
 });
 
 app.get('/article-two',function(req,res){
