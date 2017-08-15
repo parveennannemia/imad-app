@@ -17,7 +17,7 @@ function createTemplate(data){
     var date='${data.date}';
     var articleContent= '${data.articleContent}';
     
-    var htmlTemplate=' <html><head> ${title}<link href="/ui/style.css" rel="stylesheet" /></head><hr><body><div> <a href="\" >Home</a></div><h1>${heading}</h1><hr><div>${date}</div></hr><div class="content">${articleContent}</div><hr/></body> </html>'
+    var htmlTemplate=' <html><head> title<link href="/ui/style.css" rel="stylesheet" /></head><hr><body><div> <a href="\" >Home</a></div><h1>${heading}</h1><hr><div>${date}</div></hr><div class="content">${articleContent}</div><hr/></body> </html>'
 
 return htmlTemplate;
 } 
