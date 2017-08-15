@@ -13,6 +13,7 @@ var article1 = {
 };
 function createTemplate(data){
     var title= '${data.title}';
+    alert(title);
     var heading='${data.head}';
     var date='${data.date}';
     var articleContent= '${data.articleContent}';
