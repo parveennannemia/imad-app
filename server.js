@@ -39,13 +39,14 @@ app.get('/', function (req, res) {
 //trying to connect with db
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
-   pool.query ('select * from test',function (err,result){
+   pool.query ('SELECT * FROM "test"',function (err,result){
        if(err){
            res.statusCode = 500;
             return res.send('Error 500: No record found');
           // res.status(500).send(err.toString());
-       }else
+       }else{
        res.send(JSON.stringfy(result));
+       }
    }) ;
 });
 //app.get('/article-one',function(req,res){
