@@ -42,7 +42,7 @@ app.get('/test-db',function(req,res){
    pool.query ('select * from user',function (err,result){
        if(err){
            res.statusCode = 500;
-    return res.send('Error 500: No record found');
+            return res.send('Error 500: No record found');
           // res.status(500).send(err.toString());
        }else
        res.send(JSON.stringfy(result));
