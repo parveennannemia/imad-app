@@ -8,8 +8,8 @@ var config = {
     database:'parveennannemia',
     host:'db.imad.hasuara_app.io',
     port: '5432',
-    password: 'db-parveennannemia-66225'
-    //process.env.DB_PASSWORD
+    password: //'db-parveennannemia-66225'
+    process.env.DB_PASSWORD
 }
 
 var app = express();
@@ -37,7 +37,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 //trying to connect with db
-var pool=new Pool(config);
+var pool = new Pool(config);
 app.get('/test-db',function(req,res){
    pool= ('select * from user',function (err,result){
        if(err){
