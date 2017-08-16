@@ -39,12 +39,12 @@ app.get('/', function (req, res) {
 //trying to connect with db
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
-   pool= ('select * from user',function (err,result){
+   pool.query ('select * from user',function (err,result){
        if(err){
            res.status(500).send(err.toString());
        }else
        res.send(JSON.stringfy(result));
-   }) 
+   }) ;
 });
 //app.get('/article-one',function(req,res){
 //res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
