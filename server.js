@@ -8,8 +8,8 @@ var config = {
     database:'parveennannemia',
     host:'db.imad.hasuara_app.io',
     port: '5432',
-    password: //'db-parveennannemia-66225'
-    process.env.DB_PASSWORD
+    password: 'db-parveennannemia-66225'
+    //process.env.DB_PASSWORD
 }
 
 var app = express();
