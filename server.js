@@ -47,7 +47,7 @@ app.get('/test-db',function(req,res){
             return res.send('Error 500: No records found');
           // res.status(500).send(err.toString());
        }else{
-            res.send(JSON.stringfy(result.rows));
+            return res.send(JSON.stringfy(result.rows));
        }
    }) ;
 });
