@@ -60,11 +60,12 @@ app.get('/articles/:articleName',function(req,res){
     var articleName = req.params.articleName;
     //alert(articleName);
     pool.query("select * from article where title= " + articleName,function (err,result){
-        if(err){
+        /*if(err){
            res.statusCode = 500;
             return res.send('Error 500: No quote found' );
           //return res.status(500).send(err.toString());
-       }else if(result.rows.length()=== 0){
+       }else*/
+       if(result.rows.length()=== 0){
            res.statusCode = 404;
             return res.send('Error 404: Article Not found');
        }
