@@ -62,8 +62,8 @@ app.get('/articles/:articleName',function(req,res){
     pool.query("select * from article where title= " + articleName,function (err,result){
         if(err){
            res.statusCode = 500;
-            return res.send(err.toString());
-          // res.status(500).send(err.toString());
+            //return res.send(err.toString());
+          return res.status(500).send(err.toString());
        }else if(result.rows.length()== 0){
            res.statusCode = 404;
             return res.send('Error 404: Article Not found');
@@ -71,7 +71,7 @@ app.get('/articles/:articleName',function(req,res){
        else{
            var articleData = result.rows[0];
            // return res.send(JSON.stringfy(result.rows));
-            res.send(createTemplate(articleData));
+           return  res.send(createTemplate(articleData));
        }
        } );
    
