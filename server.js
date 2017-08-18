@@ -40,7 +40,7 @@ app.get('/', function (req, res) {
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
    pool.query ('SELECT * FROM test',function (err,result){
-       alert(JSON.stringfy(result));
+       alert(JSON.stringfy(pool));
        if(err){
            res.statusCode = 500;
             return res.send('Error 500: No records found');
