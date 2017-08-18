@@ -65,7 +65,7 @@ app.get('/articles/:articleName',function(req,res){
         if(err){
            res.statusCode = 500;
             //return res.send('Error 500: No quote found' );
-          return res.status(500).send(err.toString());
+           res.status(500).send(err.toString());
        }else
        if(result.rows.length()=== 0){
            res.statusCode = 404;
