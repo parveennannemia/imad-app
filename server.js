@@ -61,7 +61,7 @@ app.get('/articles/:articleName',function(req,res){
     //alert(articleName);
     //select * from article where title= 'article-one';
     console.info(articleName);
-    pool.query("select * from article where title= ' " + article-one+"'",function (err,result){
+    pool.query("select * from article where title= '" +article-one+" '",function (err,result){
         console.info("err" + err);
         console.info("result" + result);
         if(err){
