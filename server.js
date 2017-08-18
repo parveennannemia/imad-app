@@ -41,13 +41,13 @@ var pool = new Pool(config);
 app.get('/test-db',function(req,res){
    pool.query ('SELECT * FROM test',function (err,result){
        //alert(err);
-      // alert(JSON.stringfy(pool));
+       alert(JSON.stringfy(result));
        if(err){
            res.statusCode = 500;
             return res.send('Error 500: No records found');
           // res.status(500).send(err.toString());
        }else{
-            res.send(JSON.stringfy(result));
+            res.send(JSON.stringfy(result.rows));
        }
    }) ;
 });
