@@ -39,7 +39,7 @@ app.get('/', function (req, res) {
 //trying to connect with db
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
-    alert('HI');
+    alert(HI);
    pool.query ('SELECT * FROM test',function (err,result){
        alert("err.toString()");
        alert(JSON.stringfy(result));
