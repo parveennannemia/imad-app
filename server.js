@@ -57,9 +57,10 @@ app.get('/test-db',function(req,res){
 //});
 app.get('/articles/:articleName',function(req,res){
     //res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-    //var articleName = req.params.articleName;
+    var articleName = req.params.articleName;
     //alert(articleName);
     //select * from article where title= 'article-one';
+    console.info(articleName);
     pool.query("select * from article where title= " + 'article-one',function (err,result){
         console.info("err" + err);
         console.info("result" + result);
